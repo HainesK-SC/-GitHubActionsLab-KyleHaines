@@ -23,35 +23,34 @@ jobs:
 
       - name: Display File
         run: cat testfile.txt
-    
-    windows_job:
-        name: Windows Job Running Latest
-        runs-on: windows-latest
-        steps:
-          - name: Checkout Code
-            uses: actions/checkout@v4
+  windows_job:
+    name: Windows Job Running Latest
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
-          - name: Print OS Info
-            run: systeminfo
+      - name: Print OS Info
+        run: systeminfo
 
-          - name: Create Text File
-            run: echo "Hello, World" > testfile.txt
+      - name: Create Text File
+        run: echo "Hello, World" > testfile.txt
 
-          - name: Display File
-            run: Get-Content testfile.txt
+      - name: Display File
+        run: Get-Content testfile.txt
         
-    macos_job:
-        name: macOS Job Running Latest
-        runs-on: macos-latest
-        steps:
-            - name: Checkout Code
-            - uses: actions/checkout@v4
+  macos_job:
+    name: macOS Job Running Latest
+    runs-on: macos-latest
+    steps:
+        - name: Checkout Code
+        - uses: actions/checkout@v4
 
-            - name: Print OS Info
-            - run: uname -a
+        - name: Print OS Info
+        - run: uname -a
 
-            - name: Create Text File
-            - run: echo "Hello, World" > testfile.txt
+        - name: Create Text File
+        - run: echo "Hello, World" > testfile.txt
 
-            - name: Display File
-            - run: cat testfile.txt
+        - name: Display File
+        - run: cat testfile.txt
