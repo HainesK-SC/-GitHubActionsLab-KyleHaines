@@ -1,47 +1,47 @@
-## YAML Template.
 ---
 name: ICE5
 
-on: 
-    release: 
-        types: created
-    workflow_dispatch: #comment
-    push:
-        branches: ["main"]
-        pull_request: ["main"]
+on:
+  release:
+    types: [created]
+  workflow_dispatch: #comment
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
 
 jobs:
   build:
     name: build
     runs-on: ubuntu-latest
     steps:
-    - name: Building the Application
-    - run: echo Building application...
-    - name: 
-    - run: sleep 5
-    - name: Application Building Complete
-    - run: echo Building complete...
-    
+      - name: Building the Application
+        run: echo Building application...
+      - name: Simulate Build
+        run: sleep 5
+      - name: Application Building Complete
+        run: echo Building complete...
+
   test:
     needs: [build]
     name: test
     runs-on: ubuntu-latest
     steps:
-    - name: Testing
-    - run: echo Running tests...
-    - name: Simulate Testing
-    - run: sleep 5
-    - name: Testing Complete
-    - run: echo Testing complete...
-      
+      - name: Testing
+        run: echo Running tests...
+      - name: Simulate Testing
+        run: sleep 5
+      - name: Testing Complete
+        run: echo Testing complete...
+
   deploy:
-    needs : [test]
+    needs: [test]
     name: deploy
     runs-on: ubuntu-latest
     steps:
-    - name: Deploying the application
-    - run: echo Deploying application
-    - name: Simulating Deployment
-    - run: sleep 5
-    - name: Deployment Complete
-    - run: echo Deployment complete...
+      - name: Deploying the application
+        run: echo Deploying application
+      - name: Simulating Deployment
+        run: sleep 5
+      - name: Deployment Complete
+        run: echo Deployment complete...
