@@ -8,7 +8,7 @@ on:
     workflow_dispatch: #comment
     push:
         branches: ["main"]
-    pull_request: ["main"]
+        pull_request: ["main"]
 
 jobs:
   build:
