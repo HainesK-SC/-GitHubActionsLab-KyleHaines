@@ -8,15 +8,18 @@ on:
         branches: ["main"]
 
 jobs:
-    ubuntu_job:
-        name: Ubuntu Job Running Latest
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout Code
-            - uses: actions/checkout@v4
-            - name: Print OS Info
-            - run: uname -a
-            - name: Create Text File
-            - run: echo "Hello, World" > testfile.txt
-            - name: Display File
-            - run: cat testfile.txt
+  ubuntu_job:
+    name: Ubuntu Job Running Latest
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Print OS Info
+        run: uname -a
+
+      - name: Create Text File
+        run: echo "Hello, World" > testfile.txt
+
+      - name: Display File
+        run: cat testfile.txt
