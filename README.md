@@ -12,3 +12,5 @@ The 'needs' action sets dependencies. If a job 'needs' another job, that job is 
 The uses action specifies a workflow file that can be reused to perform some given action, like 'checkout', for example. The 'checkout' action will checkout the code in the branch the script is being run on.
 
 I didn't use env in this, but I could have used it in either workflow to hold some variable. In workflow A, it could have been the various echo values to their own env variable. Or in workflow B, I could have saved OS info into a variable and echo the variable instead.
+
+I didn't have any major challenges in this. One of the biggest hurdles was just making sure that the YAML formatting was correct, and for that I used a YAML validator to validate the format. It wasn't fool proof, as their were a couple instances where it wasn't just formatting but also the commands being used, or the commands missing, but overall, it was pretty smooth.
